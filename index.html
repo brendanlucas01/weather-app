@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+	<link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto+Slab:wght@300;400&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="weatherapp.css">
+</head>
+<body onload="getCoords()">
+<div  id="field" >
+<div class="container" align="center">
+	<div id="jumbotron" class="jumbotron">
+		<a id="citylink" href="">
+		<h1 id="cityname" class="display-1"></h1>
+		<h2 id="todaydate"></h2>
+		</a>
+		<h3>Sunrise :<span id="sunriser"></span></h3>
+		<h3>Sunset :<span id="sunseter"></span></h3>
+		<br><span id="message"> </span><br><br>
+	<span>
+		<input type="value" name="querycity"  placeholder="  Enter City Name" class="inputtext" id="Ecity">&nbsp&nbsp<button class="btn btn-danger btn-sm" id="butn1"><i class="fal fa-car-building"></i></i>&nbsp&nbspSearch City</button>
+	</span>
+	<br><br>
+	<span>
+		<input type="value" name="querylatt"  placeholder="  Enter latitude (N/S)" class="inputtext" id="Elatt">&nbsp&nbsp
+		<input type="value" name="queryiong"  placeholder="  Enter longitude (E/W)" class="inputtext" id="Elong">&nbsp&nbsp
+		<button class="btn btn-primary btn-sm" id="butn2"><i class="fad fa-map-marker-alt"></i>&nbsp&nbspSearch Coordinates</button>
+	</span>
+	<br><br>
+	<button class="btn btn-success btn-sm" id="butn3"><i class="fad fa-search-location"></i>&nbsp&nbspSearch My Location</button>
+	</div>
+</div>
+<div class="row">
+	<div class="col-1"> </div>
+	<div class="col-10">
+		<div class="row">
+		<div id="c1" class="card col-6 col-md-4 col-xl-2 mb-3">
+	<a href="" class="meta">
+	<h5 class="card-header"><span class="date"></span></h5>
+  	<img src="dice-0.jpg" class="imgs card-img-top">
+    </a>
+  <div class="card-body">
+    <h5 class="card-title"><span class="info"></span></h5>
+    <div class="card-text">
+    		Max Temp=<span class="maxtemp"></span>°C<br>
+			Min Temp=<span class="mintemp"></span>°C<br>
+			Avg Temp=<span class="avgtemp"></span>°C<br>
+			Humidity=<span Class="humid"></span>%<br>
+			WindSpeed=<span class="speed"></span>kph<br>
+			Pressure=<span class="pres"></span>mb<br>
+			Visibility=<span class="vis"></span>km<br>
+    </div>
+  </div>
+	</div>
+	
+
+	
+		<div id="c2" class="card col-6 col-md-4 col-xl-2 mb-3">
+	<a href="" class="meta"><h5 class="card-header"><span class="date"></span></h5>
+  	<img src="dice-0.jpg" class="imgs card-img-top">
+  	</a>
+  <div class="card-body">
+    <h5 class="card-title"><span class="info"></span></h5>
+    <div class="card-text">
+    		Max Temp=<span class="maxtemp"></span>°C<br>
+			Min Temp=<span class="mintemp"></span>°C<br>
+			Avg Temp=<span class="avgtemp"></span>°C<br>
+			Humidity=<span Class="humid"></span>%<br>
+			WindSpeed=<span class="speed"></span>kph<br>
+			Pressure=<span class="pres"></span>mb<br>
+			Visibility=<span class="vis"></span>km<br>
+    </div>
+  </div>
+	</div>
+	
+	
+		<div id="c3" class="card col-6 col-md-4 col-xl-2 mb-3">
+	<a href="" class="meta"><h5 class="card-header"><span class="date"></span></h5>
+  	<img src="dice-0.jpg" class="imgs card-img-top">
+  	</a>
+  <div class="card-body">
+    <h5 class="card-title"><span class="info"></span></h5>
+    <div class="card-text">
+    		Max Temp=<span class="maxtemp"></span>°C<br>
+			Min Temp=<span class="mintemp"></span>°C<br>
+			Avg Temp=<span class="avgtemp"></span>°C<br>
+			Humidity=<span Class="humid"></span>%<br>
+			WindSpeed=<span class="speed"></span>kph<br>
+			Pressure=<span class="pres"></span>mb<br>
+			Visibility=<span class="vis"></span>km<br>
+    </div>
+  </div>
+	</div>
+
+
+	<div id="c4" class="card col-6 col-md-4 col-xl-2 mb-3">
+	<a href="" class="meta"><h5 class="card-header"><span class="date"></span></h5>
+  	<img src="dice-0.jpg" class="imgs card-img-top">
+    </a>
+  <div class="card-body">
+    <h5 class="card-title"><span class="info"></span></h5>
+    <div class="card-text">
+    		Max Temp=<span class="maxtemp"></span>°C<br>
+			Min Temp=<span class="mintemp"></span>°C<br>
+			Avg Temp=<span class="avgtemp"></span>°C<br>
+			Humidity=<span Class="humid"></span>%<br>
+			WindSpeed=<span class="speed"></span>kph<br>
+			Pressure=<span class="pres"></span>mb<br>
+			Visibility=<span class="vis"></span>km<br>
+    </div>
+  </div>
+	</div>
+
+	
+	<div id="c5" class="card col-6 col-md-4 col-xl-2 mb-3">
+	<a href="" class="meta"><h5 class="card-header"><span class="date"></span></h5>
+  	<img src="dice-0.jpg" class="imgs card-img-top">
+  	</a>
+  <div class="card-body">
+    <h5 class="card-title"><span class="info"></span></h5>
+    <div class="card-text">
+    		Max Temp=<span class="maxtemp"></span>°C<br>
+			Min Temp=<span class="mintemp"></span>°C<br>
+			Avg Temp=<span class="avgtemp"></span>°C<br>
+			Humidity=<span Class="humid"></span>%<br>
+			WindSpeed=<span class="speed"></span>kph<br>
+			Pressure=<span class="pres"></span>mb<br>
+			Visibility=<span class="vis"></span>km<br>
+    </div>
+  </div>
+	</div>
+	
+
+	
+	<div id="c6" class="card col-6 col-md-4 col-xl-2 mb-3">
+	<a href="" class="meta">
+	<h5 class="card-header"><span class="date"></span></h5>
+  	<img src="dice-0.jpg" class="imgs card-img-top">
+  	</a>
+  <div class="card-body">
+    <h5 class="card-title"><span class="info"></span></h5>
+    <div class="card-text">
+    		Max Temp=<span class="maxtemp"></span>°C<br>
+			Min Temp=<span class="mintemp"></span>°C<br>
+			Avg Temp=<span class="avgtemp"></span>°C<br>
+			Humidity=<span Class="humid"></span>%<br>
+			WindSpeed=<span class="speed"></span>kph<br>
+			Pressure=<span class="pres"></span>mb<br>
+			Visibility=<span class="vis"></span>km<br>
+    </div>
+  </div>
+	</div>
+	
+</div>
+	</div>
+	<div class="col-1"> </div>
+</div>
+<div align="center">
+	<button id="button4"  class="btn btn-light"><i id="icon1" class="fa-sun"></i>&nbsp&nbspDay mode</button>&nbsp&nbsp
+	<button id="button5"  class="btn btn-dark"><i id="icon2"  class="fa-moon"></i>&nbsp&nbspNight mode</button>
+</div>
+
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script type="text/javascript" src="weatherapp.js"></script>
+</div>
+</body>
+</html>
